@@ -15,13 +15,13 @@ Retrofit is a popular type-safe HTTP client for Android and Java that makes it e
 For this tutorial we will build a simple comments app that fetches comments data from  a free API Faker {JSON} Placeholder. Here is the endpoint: https://jsonplaceholder.typicode.com/comments. 
 While getting data from the internet using **Retrofit** is the primary focus for this project, we will use other libraries including
 
-- **Koin** - for dependency injection 
-- **Kotlinx-serialization** - core library for serializing and deserializing Kotlin objects
-- **kotlinx-serialization-json** - provides JSON Format specific support . For entity serialization
-- **kotlinx-serialization converter** for Retrofit. 
-- **Kotlinx-coroutines**
-- **Okhttp3**
-- **Lifecycle**
+[] **Koin** - for dependency injection 
+[] **Kotlinx-serialization** - core library for serializing and deserializing Kotlin objects
+[] **kotlinx-serialization-json** - provides JSON Format specific support . For entity serialization
+[] **kotlinx-serialization converter** for Retrofit. 
+[] **Kotlinx-coroutines**
+[] **Okhttp3**
+[] **Lifecycle**
 
 ## Step 1: Add Dependencies and Plugins
 ### We use versions Catalog
@@ -77,7 +77,7 @@ lifecycle = ["androidx-lifecycle-runtime-ktx", "compose-lifecycle", "lifecycle-v
 koin =[ "koin-core", "koin-android", "koin-androidx-compose" ]
 ```
 - Now, add plugins and dependencies to the gradle files.
-- Add the following in ```build.gradle.kts``` project-level file
+    - Add the following in ```build.gradle.kts``` project-level file
 
 ```kotlin
 plugins {
@@ -86,7 +86,7 @@ plugins {
     alias(libs.plugins.kotlinx.serialization) apply false
 }
 ```
-- Add the following in ```build.gradle.kts``` app-level file
+    - Add the following in ```build.gradle.kts``` app-level file
 ```kotlin
 plugins {
     // ... Rest of the code
@@ -103,9 +103,8 @@ dependencies {
 ```
 - Notice we only needed to provide the ``bundles`` we created earlier and as such we didn't need to provide individual dependencies. Just three lines! That's the beauty of using ``bundles`` in ``versions catalog``.
 
-```
 ## Step 2: Define your entity class
-Now you need an entity class to hold your data. For our demo project we are getting ``comments`` data from a free API Faker ```{JSON} Placeholder```
+- Now you need an entity class to hold your data. For our demo project we are getting ``comments`` data from a free API Faker ```{JSON} Placeholder```
 Create a package called ``models``, inside it create a file ``Comment.kt`` with the following code.
 
 ```kotlin
