@@ -79,29 +79,30 @@ koin =[ "koin-core", "koin-android", "koin-androidx-compose" ]
 - Now, add plugins and dependencies to the gradle files.
     - Add the following in ```build.gradle.kts``` project-level file
 
-```kotlin
-plugins {
-    // ... Rest of the code
-    alias(libs.plugins.compose.compiler) apply false
-    alias(libs.plugins.kotlinx.serialization) apply false
-}
-```
-    - Add the following in ```build.gradle.kts``` app-level file
-```kotlin
-plugins {
-    // ... Rest of the code
-    alias(libs.plugins.compose.compiler)
-    alias(libs.plugins.kotlinx.serialization)
-}
+    ```kotlin
+    plugins {
+        // ... Rest of the code
+        alias(libs.plugins.compose.compiler) apply false
+        alias(libs.plugins.kotlinx.serialization) apply false
+    }
+    ```
+    * Add the following in ```build.gradle.kts``` app-level file
 
-dependencies {
-    // ... Rest of the code
-    implementation(libs.bundles.network)
-    implementation(libs.bundles.lifecycle)
-    implementation(libs.bundles.koin)
-}
-```
-- Notice we only needed to provide the ``bundles`` we created earlier and as such we didn't need to provide individual dependencies. Just three lines! That's the beauty of using ``bundles`` in ``versions catalog``.
+    ```kotlin
+    plugins {
+        // ... Rest of the code
+        alias(libs.plugins.compose.compiler)
+        alias(libs.plugins.kotlinx.serialization)
+    }
+
+    dependencies {
+        // ... Rest of the code
+        implementation(libs.bundles.network)
+        implementation(libs.bundles.lifecycle)
+        implementation(libs.bundles.koin)
+    }
+    ```
+    - Notice we only needed to provide the ``bundles`` we created earlier and as such we didn't need to provide individual dependencies. Just three lines! That's the beauty of using ``bundles`` in ``versions catalog``.
 
 ## Step 2: Define your entity class
 - Now you need an entity class to hold your data. For our demo project we are getting ``comments`` data from a free API Faker ```{JSON} Placeholder```
