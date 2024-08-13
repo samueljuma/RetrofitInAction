@@ -15,13 +15,13 @@ Retrofit is a popular type-safe HTTP client for Android and Java that makes it e
 For this tutorial we will build a simple comments app that fetches comments data from  a free API Faker {JSON} Placeholder. Here is the endpoint: https://jsonplaceholder.typicode.com/comments. 
 While getting data from the internet using **Retrofit** is the primary focus for this project, we will use other libraries including
 
-- [] **Koin** - for dependency injection 
+- [x] **Koin** - for dependency injection 
 - [x] **Kotlinx-serialization** - core library for serializing and deserializing Kotlin objects
-[] **kotlinx-serialization-json** - provides JSON Format specific support . For entity serialization
-[] **kotlinx-serialization converter** for Retrofit. 
-[] **Kotlinx-coroutines**
-[] **Okhttp3**
-[] **Lifecycle**
+- [x] **kotlinx-serialization-json** - provides JSON Format specific support . For entity serialization
+- [x] **kotlinx-serialization converter** for Retrofit. 
+- [x] **Kotlinx-coroutines**
+- [x] **Okhttp3**
+- [x] **Lifecycle**
 
 ## Step 1: Add Dependencies and Plugins
 ### We use versions Catalog
