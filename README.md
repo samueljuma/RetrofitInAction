@@ -143,7 +143,7 @@ object RetrofitClient {
 }
 
 ```
-- Notice that our client uses a ``json``object from ``kotlinxserialization`` and ``contentType`` from ``okhttp3`` **(helps us specifiy the MediaType)**. More ``configurations`` can be done but for brevity we will keep ours simple.
+- Notice that our client uses a ``json``object from ``kotlinxserialization`` and ``contentType`` from ``okhttp3`` (helps us specifiy the MediaType). More ``configurations`` can be done but for brevity we will keep ours simple.
   Now, we need an ``APIService``. Inside ``CommentsAPIService.kt``, below the ``retrofit client`` create an API Service interface as follows
 ```kotlin
 interface CommentsAPIService {
